@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import  'sweetalert2/dist/sweetalert2.js'
@@ -19,22 +18,22 @@ createRoot(document.getElementById('root')).render(
   <AuthProvider>
     <BrowserRouter>
       <Routes>
-        {/* main layout */}
+        {/*----------Main----------Layout-----------*/}
         <Route element={<App />}>
           <Route path='/' element={<Home />} />
           <Route path='/pricing' element={<Pricing />} />
           <Route path='/services' element={<Services />} />
           <Route path='/blogs' element={<Blogs />} />
 
-          {/* error page */}
+          {/*----------Error--------Page-------------*/}
           <Route path='*' element={<ErrorPage />} />
         </Route>
 
-        {/* authentication */}
+        {/*--------------Authentication-----------------*/}
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
 
-        {/* dashboard  */}
+        {/*-------------Dashboard--------------*/}
         <Route path='/dashboard' element={<PrivateRoute><Dashboard/></PrivateRoute>} />
       </Routes>
     </BrowserRouter>

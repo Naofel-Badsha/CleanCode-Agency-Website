@@ -1,4 +1,3 @@
-
 import { Link } from "react-router";
 
 const Dashboard = () => {
@@ -10,7 +9,7 @@ const Dashboard = () => {
             to="/"
             className="inline-flex items-center justify-center h-20 w-20 bg-white  border"
           >
-            <img src="/logo.png" alt="logo" />
+            <img className="w-[35px]" src="https://i.ibb.co.com/7NymscXK/clean-cod.png" alt="logo" />
           </Link>
           <div className="flex-grow flex flex-col justify-between text-gray-500 bg-gray-800">
             <nav className="flex flex-col mx-4 my-6 space-y-4">
@@ -122,6 +121,7 @@ const Dashboard = () => {
             </div>
           </div>
         </aside>
+
         <div className="flex-grow text-gray-800">
           <header className="flex items-center h-20 px-6 sm:px-10 bg-white">
             <button className="block sm:hidden relative flex-shrink-0 p-2 mr-2 text-gray-600 hover:bg-gray-100 hover:text-gray-800 focus:bg-gray-100 focus:text-gray-800 rounded-full">
@@ -141,6 +141,7 @@ const Dashboard = () => {
                 />
               </svg>
             </button>
+            {/*------------Sectach-----------Bars----------------*/}
             <div className="relative w-full max-w-md sm:-ml-2">
               <svg
                 aria-hidden="true"
@@ -161,13 +162,16 @@ const Dashboard = () => {
                 className="py-2 pl-10 pr-4 w-full border-4 border-transparent placeholder-gray-400 focus:bg-gray-50 rounded-lg"
               />
             </div>
+
             <div className="flex flex-shrink-0 items-center ml-auto">
+              {/*------------UserProfile-----------Button----------------*/}
               <button className="inline-flex items-center p-2 hover:bg-gray-100 focus:bg-gray-100 rounded-lg">
                 <span className="sr-only">User Menu</span>
                 <div className="hidden md:flex md:flex-col md:items-end md:leading-tight">
                   <span className="font-semibold">Grace Simmons</span>
                   <span className="text-sm text-gray-600">Lecturer</span>
                 </div>
+                {/*------------User-----------Images----------------*/}
                 <span className="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
                   <img
                     src="https://randomuser.me/api/portraits/women/68.jpg"
@@ -175,6 +179,7 @@ const Dashboard = () => {
                     className="h-full w-full object-cover"
                   />
                 </span>
+                {/*------------Arrow----------------*/}
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 20 20"
