@@ -10,14 +10,17 @@ const Testimonials = () => {
           description=""
         />
 
-        {/*-----------testimonial---------carousel-----------*/}
+        {/*-----------Testimonial---------Carousel-----------*/}
         <div>
-          <div className="carousel w-full">
+          <div className="carousel w-full ">
+            {/*--------------Slider--------1--------*/}
             <div
               id="slide1"
-              className="carousel-item md:space-x-8 relative w-full"
+              className="carousel-item relative w-full 
+             flex flex-col md:flex-row space-y-5 md:space-y-0 
+             md:space-x-8"
             >
-              <div className="md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
+              <div className="w-full md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
                 <img
                   src="/images/logos/logo1.png"
                   className="size-28 mx-auto my-2 object-contain"
@@ -38,7 +41,7 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              <div className="md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
+              <div className="w-full md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
                 <img
                   src="/images/logos/logo2.png"
                   className="size-28 mx-auto my-2 object-contain"
@@ -52,7 +55,7 @@ const Testimonials = () => {
                 </p>
 
                 <div className="flex flex-col items-center space-y-2">
-                  <div className="size-10 rounded-full [#ffe4e1] flex items-center justify-center text-[#E3311D] text-2xl font-bold">
+                  <div className="size-10 rounded-full bg-[#ffe4e1] flex items-center justify-center text-[#E3311D] text-2xl font-bold">
                     S
                   </div>
                   <h3 className="text-lg font-bold text-gray-800">
@@ -63,6 +66,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
+
               <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                 <a href="#slide4" className="btn btn-circle">
                   ❮
@@ -72,9 +76,12 @@ const Testimonials = () => {
                 </a>
               </div>
             </div>
+            {/*--------------Slider--------2--------*/}
             <div
               id="slide2"
-              className="carousel-item md:space-x-8 relative w-full"
+              className="carousel-item relative w-full 
+             flex flex-col md:flex-row space-y-5 md:space-y-0 
+             md:space-x-8"
             >
               <div className="md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
                 <img
@@ -133,9 +140,12 @@ const Testimonials = () => {
                 </a>
               </div>
             </div>
+            {/*--------------Slider--------3--------*/}
             <div
               id="slide3"
-              className="carousel-item md:space-x-8 relative w-full"
+              className="carousel-item relative w-full 
+             flex flex-col md:flex-row space-y-5 md:space-y-0 
+             md:space-x-8"
             >
               <div className="md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
                 <img
@@ -194,7 +204,13 @@ const Testimonials = () => {
                 </a>
               </div>
             </div>
-            <div id="slide4" className="carousel-item relative w-full">
+            {/*--------------Slider--------4--------*/}
+            <div
+              id="slide4"
+              className="carousel-item relative w-full 
+             flex flex-col md:flex-row space-y-5 md:space-y-0 
+             md:space-x-8"
+            >
               <div className="md:w-1/2 bg-white rounded-md shadow md:p-8 p-4">
                 <img
                   src="/images/logos/logo1.png"

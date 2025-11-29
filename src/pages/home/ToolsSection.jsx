@@ -1,5 +1,6 @@
 import { FiSettings, FiCode, FiSmartphone, FiCloud } from "react-icons/fi";
 import HeadingSection from "../../components/HeadingSection";
+import { motion } from "motion/react";
 
 const tools = [
   {
@@ -34,23 +35,27 @@ const ToolsSection = () => {
         subheading="The tools you need"
       />
 
-      {/*-----------render---------tools-------here------------*/}
+      {/*-----------Render---------Tools-------Here------------*/}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
         {tools.map((tool, index) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onHoverStart={() => console.log("hover started!")}
+
             key={index}
-            className="flex flex-col items-center text-center p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition cursor-pointer"
+            className="flex flex-col items-center text-center p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition cursor-pointer overflow-hidden"
           >
             <tool.icon className="text-[#E3311D] text-4xl mb-4" />
             <h3 className="text-lg font-bold text-gray-800">{tool.title}</h3>
             <p className="text-gray-600 mt-2">{tool.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/*----------------button----------------*/}
       <div className="text-center">
-        <button className="bg-[#E3311D] text-white px-6 py-3 rounded-md  hover:bg-[#1F2937] transition">
+        <button className="bg-[#E3311D] text-white px-6 py-3 rounded-md  hover:bg-[#1F2937] transition animate-bounce duration-700">
           Explore More
         </button>
       </div>

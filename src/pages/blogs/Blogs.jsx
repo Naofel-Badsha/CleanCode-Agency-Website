@@ -1,4 +1,8 @@
 import HeadingSection from "../../components/HeadingSection";
+import { motion } from "motion/react";
+import { fadeInUp, transitions } from "../../utils/animations";
+
+
 const blogs = [
   {
     id: 1,
@@ -47,6 +51,8 @@ const blogs = [
 ];
 
 const Blogs = () => {
+
+
   return (
     <div className="section-container">
       <HeadingSection
@@ -57,8 +63,12 @@ const Blogs = () => {
 
       {/*------------Blog-----------Container-------------*/}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        {blogs.map((blog) => (
-          <div
+        {blogs.map((blog, index) => (
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            transition={{ ...transitions.default, delay: index * 0.2 }}
             key={blog.id}
             className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer"
           >
@@ -94,7 +104,7 @@ const Blogs = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

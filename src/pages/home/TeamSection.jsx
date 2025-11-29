@@ -69,12 +69,13 @@ const TeamSection = () => {
               key={i}
               className="bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h- object-cover"
-              />
-
+              <div className="overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h- object-cover hover:scale-110 duration-500"
+                />
+              </div>
               {/*---------------Content----------------*/}
               <div className="p-5">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">

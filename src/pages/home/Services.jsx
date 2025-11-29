@@ -1,5 +1,10 @@
 import HeadingSection from "../../components/HeadingSection";
 import { FiActivity, FiCompass, FiTruck, FiCalendar } from "react-icons/fi";
+import { motion } from "motion/react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -29,6 +34,10 @@ const services = [
 ];
 
 const Services = () => {
+    useEffect(() => {
+      AOS.init({ duration: "2000" });
+    }, []);
+
   return (
     <div className="max-w-screen-2xl container bg-white mx-auto py-20 px-5">
       <HeadingSection
@@ -41,6 +50,7 @@ const Services = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:w-4/5 mx-auto mb-16">
         {services.map((service, index) => (
           <div
+            data-aos="zoom-in"
             key={index}
             className="flex flex-col items-center text-center p-6 hover:shadow-xl hover:rounded-md transition cursor-pointer"
           >
@@ -52,9 +62,13 @@ const Services = () => {
 
       {/*------------------button------------------*/}
       <div className="text-center">
-        <button className="bg-[#E3311D] text-white px-8 py-3 rounded-md  hover:bg-[#1F2937] transition">
+        <motion.button
+          animate={{ y: [0, 40] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="bg-[#E3311D] text-white px-8 py-3 rounded-md  hover:bg-[#1F2937] transition"
+        >
           Explore More
-        </button>
+        </motion.button>
       </div>
     </div>
   );
