@@ -1,6 +1,6 @@
-import { useState, useRef } from 'react';
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
-import { BsPlayFill, BsPauseFill } from 'react-icons/bs';
+import { useState, useRef } from "react";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import { BsPlayFill, BsPauseFill } from "react-icons/bs";
 
 const customerData = [
   {
@@ -53,16 +53,22 @@ const CustomerSection = () => {
   const sliderRef = useRef(null);
 
   const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? customerData.length - 1 : prev - 1));
+    setCurrentSlide((prev) =>
+      prev === 0 ? customerData.length - 1 : prev - 1
+    );
   };
 
   const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev === customerData.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) =>
+      prev === customerData.length - 1 ? 0 : prev + 1
+    );
   };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
-    const video = document.querySelector(`video[data-customer="${customerData[currentSlide].id}"]`);
+    const video = document.querySelector(
+      `video[data-customer="${customerData[currentSlide].id}"]`
+    );
     if (video) {
       isPlaying ? video.pause() : video.play();
     }
@@ -81,14 +87,14 @@ const CustomerSection = () => {
           <div className="hidden md:flex gap-4">
             <button
               onClick={handlePrevSlide}
-              className="p-4 hover:bg-gray-200 rounded-full transition-colors"
+              className="p-4 border-[1px] border-[#E3311D] hover:bg-[#E3311D] hover:text-white animate-pulse rounded-full transition-colors"
               aria-label="Previous slide"
             >
               <HiArrowLeft className="w-6 h-6" />
             </button>
             <button
               onClick={handleNextSlide}
-              className="p-4 hover:bg-gray-200 rounded-full transition-colors"
+              className="p-4 border-[1px] border-[#E3311D] hover:bg-[#E3311D] hover:text-white animate-bounce rounded-full transition-colors "
               aria-label="Next slide"
             >
               <HiArrowRight className="w-6 h-6" />

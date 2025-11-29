@@ -11,7 +11,7 @@ const Newsletter = () => {
       />
 
       <div className="flex items-center flex-col md:flex-row justify-center gap-4 ">
-        <button className="bg-[#E3311D] text-white px-6 py-3 rounded-md flex justify-center items-center space-x-2 hover:bg-[#1F2937] transition ">
+        <button className="bg-[#E3311D] text-white px-6 py-3 rounded-md flex justify-center items-center space-x-2 hover:bg-[#1F2937] transition animate-bounce ">
           <span>Subscribe Now</span>
           <FiArrowRight />
         </button>
