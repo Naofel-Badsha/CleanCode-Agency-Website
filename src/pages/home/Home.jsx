@@ -9,6 +9,7 @@ import TeamSection from './TeamSection'
 import Pricing from './Pricing'
 import FAQs from './FAQs'
 import Newsletter from './Newsletter'
+import CustomerSection from './CustomerSection'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <HeroSection/>
     <ToolsSection/>
     <CompanyLogos/>
+    <CustomerSection />
     <Services/>
     <Testimonials/>
     <Blogs/>
