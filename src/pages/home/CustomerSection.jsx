@@ -96,7 +96,7 @@ const CustomerSection = () => {
           </div>
         </div>
 
-        {/* Slider */}
+        {/*------------------Slider----------------------*/}
         <div className="relative overflow-hidden">
           <div
             ref={sliderRef}
@@ -118,7 +118,7 @@ const CustomerSection = () => {
                   />
                   <div className="absolute inset-0 bg-black/40" />
 
-                  {/* Content */}
+                  {/*------------------Content---------------------*/}
                   <div className="absolute inset-0 p-8 flex flex-col">
                     <img
                       src={customer.logo}

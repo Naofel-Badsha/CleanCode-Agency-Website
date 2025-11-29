@@ -44,7 +44,7 @@ const HeroSection = () => {
               onClick={openModal}
               className="absolute inset-0 flex items-center justify-center rounded-lg group-hover:opacity-75 transition z-0"
             >
-              <FaRegCirclePlay className="text-white text-5xl hover:text-blue-600" />
+              <FaRegCirclePlay className="text-white text-5xl hover:text-[#E3311D] animate-bounce duration-300" />
             </button>
           </div>
         </div>
@@ -60,11 +60,10 @@ const HeroSection = () => {
                 &times;
               </button>
               <iframe
-                className="w-full aspect-video"
-                width="560"
+                width="540"
                 height="315"
-                src="https://www.youtube.com/embed/sqyuaO_AnwQ?si=_io8D8Mamwq8gMl4"
-                title="YouTube video player"
+                src="https://www.youtube.com/embed/Kb0THChZnTE"
+                title="CleanCode Tech Startup Office Tour"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
@@ -79,3 +78,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
